@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>{{ apartment.title }}</title>
+</head>
+<body>
+    <h1>{{ apartment.title }}</h1>
+    <p>{{ apartment.description }}</p>
+    <p>Цена: {{ apartment.price }}$</p>
+    <p>Адрес: {{ apartment.address }}</p>
+    <p>Владелец: {{ apartment.owner.username }}</p>
+    <a href="{% url 'index' %}">Назад к списку</a>
+    {% if request.user == apartment.owner %}
+        <a href="{% url 'apartment_edit' apartment.id %}">Редактировать</a>
+    {% endif %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ apartment.title }}</title>
+</head>
+<body>
+    <h1>{{ apartment.title }}</h1>
+    <p>{{ apartment.description }}</p>
+    <p>Цена: {{ apartment.price }} руб.</p>
+    <p>Адрес: {{ apartment.address }}</p>
+    <p>Владелец: {{ apartment.owner.username }}</p>
+    <p>Дата добавления: {{ apartment.created_at }}</p>
+    <a href="{% url 'index' %}">Вернуться к списку</a>
+</body>
+</html>
