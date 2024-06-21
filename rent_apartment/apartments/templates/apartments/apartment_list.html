@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список апартаментов</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Список апартаментов</h1>
+        <a href="{% url 'apartment_create' %}" class="btn btn-primary">Добавить апартаменты</a>
+        <ul class="list-group mt-3">
+            {% for apartment in apartments %}
+                <li class="list-group-item">
+                    <h2>{{ apartment.title }}</h2>
+                    <p>{{ apartment.description }}</p>
+                    <p>Цена: руб {{ apartment.price }}</p>
+                    <p>Адрес: {{ apartment.address }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
